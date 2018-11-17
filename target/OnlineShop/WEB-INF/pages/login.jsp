@@ -88,6 +88,10 @@
 							
 							<input type="email" placeholder="Email Address" name="login" value="${login}" autofocus/>
 							<input type="password" placeholder="Password" name="pass" value=""/>
+							<span>
+								<input type="checkbox" class="checkbox" name="keep_sign_in" value="check"/> 
+								Keep me signed in
+							</span>
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 					</div><!--/login form-->

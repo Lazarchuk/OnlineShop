@@ -7,6 +7,7 @@ import online.shop.model.User;
 import online.shop.model.UserSignUp;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
@@ -27,7 +28,12 @@ public class SignUpController {
     private RegionDAO regionDAO = factory.getRegionDAO();
 
     @RequestMapping(method = RequestMethod.GET)
-    public String initForm(ModelMap model, HttpSession session){
+    public String initForm(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+                           @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
+                           ModelMap model, HttpSession session){
+        // Try to find user by cookie
+        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+
         if (session.getAttribute("sessionUser") != null){
             return "redirect:profile";
         }

@@ -1,3 +1,4 @@
+online\shop\controller\CookieController.class
 online\shop\dao\ProductDAO.class
 online\shop\controller\ProductController.class
 online\shop\dao\DataAbstractFactory.class

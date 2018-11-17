@@ -4,6 +4,7 @@ import online.shop.dao.*;
 import online.shop.model.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,13 @@ public class CartController {
 
     //loads cart content
     @RequestMapping(method = RequestMethod.GET)
-    public String loadCart(HttpSession session , ModelMap model){
+    public String initPage(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+                           @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
+                           HttpSession session , ModelMap model){
+
+        // Try to find user by cookie
+        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+
         Cart cart = null;
         if (session.getAttribute("cart") != null){
             cart = (Cart) session.getAttribute("cart");

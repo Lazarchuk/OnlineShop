@@ -2,11 +2,16 @@ package online.shop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import online.shop.model.*;
 import online.shop.dao.*;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
@@ -23,27 +28,24 @@ public class UserProfileController {
     private static final String EMAIL_PATTERN =
             "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                     + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    private boolean isDeniedAccess;
-    private String message;
+    //private boolean isDeniedAccess;
+    //private String message;
     private DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
     private UserDAO userDAO;
     private RegionDAO regionDAO;
     private List<String> errors;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String initForm(HttpSession session, ModelMap model) {
+    public String initForm(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+                           @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
+                           HttpSession session, ModelMap model) {
+        // Try to find user by cookie
+        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+
         if (session.getAttribute("sessionUser") != null){
             regionDAO = factory.getRegionDAO();
             List<String> regions = regionDAO.getRegions();
             User sessionUser = (User)session.getAttribute("sessionUser");
-
-            /*UserEdit userEditForm = new UserEdit();*/
-            /*userEditForm.setName(sessionUser.getName());
-            userEditForm.setEmail(sessionUser.getEmail());
-            userEditForm.setGender(sessionUser.getGender());
-            userEditForm.setArea(sessionUser.getArea());
-            userEditForm.setComment(sessionUser.getComment());
-            model.addAttribute("editUserForm", userEditForm);*/
 
             UserMainInfo userMainInfo = new UserMainInfo();
             userMainInfo.setName(sessionUser.getName());
@@ -67,9 +69,21 @@ public class UserProfileController {
     }
 
     @RequestMapping(method = RequestMethod.POST, params = "logout")
-    public String logoutForm(@RequestParam("logout") String logout, HttpSession session) {
+    public String logoutForm(@RequestParam("logout") String logout, HttpSession session,
+                             HttpServletResponse response, HttpServletRequest request) {
         if (logout != null) {
             session.removeAttribute("sessionUser");
+            Cookie[] cookies = request.getCookies();
+            for (Cookie cookie : cookies){
+                if (cookie.getName().equals("userEmailCookie")){
+                    cookie.setValue("default");
+                    response.addCookie(cookie);
+                }
+                if (cookie.getName().equals("userPassCookie")){
+                    cookie.setValue("default");
+                    response.addCookie(cookie);
+                }
+            }
         }
         return "redirect:login";
     }
