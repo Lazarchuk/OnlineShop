@@ -41,7 +41,7 @@
 							<c:if test="${sessionScope.sessionUser ne null}">
 							<div class="btn-group clearfix">
 								<h5 class="sessionUser">You logined as: ${sessionScope.sessionUser.name}</h5>
-								<form class="logoutForm" action="profile" method="post"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
+								<form class="logoutForm" action="profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
 							</div>
 							</c:if>
 						</div>
@@ -77,7 +77,7 @@
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>					
-						<form action="login" method="post">
+						<form action="login" method="POST">
 						
 							<c:if test="${isDeniedAccess}">
 							<div class="denied">

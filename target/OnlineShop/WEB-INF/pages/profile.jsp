@@ -42,7 +42,7 @@
 							<c:if test="${sessionScope.sessionUser ne null}">
 							<div class="btn-group clearfix">
 								<h5 class="sessionUser">You logined as: ${sessionScope.sessionUser.name}</h5>
-								<form class="logoutForm" action="profile" method="post"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
+								<form class="logoutForm" action="profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
 							</div>
 							</c:if>
 						</div>

@@ -42,7 +42,7 @@
 							<c:if test="${sessionScope.sessionUser ne null}">
                                 <div class="btn-group">
                                     <h5 class="sessionUser">You logined as: ${sessionScope.sessionUser.name}</h5>
-									<form class="logoutForm" action="profile" method="post"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
+									<form class="logoutForm" action="profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
                                 </div>
                             </c:if>
 						</div>
@@ -98,7 +98,7 @@
 									<p>${prod.key.price}</p>
 								</td>
 								<td class="cart_quantity">
-									<form action="cart" method="post">
+									<form action="cart" method="POST">
 									<div class="cart_quantity_button">
 										<input type="hidden" name="reWriteId" value="${prod.key.id}">
 										<img class="cart_quantity_up" src="static/images/minus.png" onclick="decreaseAmount(${prod.key.id})">
@@ -113,7 +113,7 @@
 								</td>
 								<td>
 									<!-- <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a> -->
-									<form class="cart_delete" action="cart" method="post">
+									<form class="cart_delete" action="cart" method="POST">
 										<input type="hidden" name="deleteId" value="${prod.key.id}">
 										<button class="cart_quantity_delete" type="submit"><i class="fa fa-times"></i></button>
 									</form>

@@ -1,9 +1,9 @@
 package online.shop.dao;
 
 import online.shop.model.Product;
+
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MySQLProduct implements ProductDAO {
     private Connection connection;
@@ -99,6 +99,52 @@ public class MySQLProduct implements ProductDAO {
             resultSet.close();
         }
         catch (SQLException e){
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+    // get max price of product which exist in DB
+    @Override
+    public String getMaxPrice(){
+        // Default max price
+        String maxPrice = "100000";
+        String sql = "SELECT price FROM products";
+        Set<Integer> prices = new HashSet<>();
+        try (Statement statement = connection.createStatement()){
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()){
+                prices.add(Integer.parseInt(resultSet.getString("price")));
+            }
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (prices.size() > 0){
+            maxPrice = Collections.max(prices).toString();
+        }
+
+        return maxPrice;
+    }
+
+    @Override
+    public List<Product> getProductsByPriceRange(String lowerPrice, String upperPrice) {
+        String sql = "SELECT id, name, description, price, category FROM products WHERE price BETWEEN ? and ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(sql)){
+            ps.setInt(1, Integer.parseInt(lowerPrice));
+            ps.setInt(2, Integer.parseInt(upperPrice));
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()){
+                Product product = new Product();
+                product.setId(resultSet.getInt("id"));
+                product.setName(resultSet.getString("name"));
+                product.setDescription(resultSet.getString("description"));
+                product.setPrice(resultSet.getInt("price"));
+                product.setCategory(resultSet.getString("category"));
+                products.add(product);
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return products;

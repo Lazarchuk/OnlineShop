@@ -20,14 +20,7 @@ public class ProductDetailsController {
     private ProductDAO productDAO = factory.getProductDAO();
 
     @RequestMapping(method = RequestMethod.GET)
-    public String loadDetails(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
-                              @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
-                              ModelMap model, HttpSession session){
-        // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
-
-        List<String> categories = productDAO.getCategories();
-        model.addAttribute("categories", categories);
+    public String loadDetails(){
         return "redirect:home";
     }
 
@@ -41,6 +34,9 @@ public class ProductDetailsController {
 
         int productId = 0;
         List<String> categories = productDAO.getCategories();
+        String maxPrice = productDAO.getMaxPrice();
+        String upperPrice = maxPrice;
+        String lowerPrice = "0";
 
         if (prodId != null){
             productId = Integer.parseInt(prodId);
@@ -48,6 +44,9 @@ public class ProductDetailsController {
         Product product = productDAO.getProduct(productId);
         model.addAttribute("product", product);
         model.addAttribute("categories", categories);
+        model.addAttribute("lowerPrice", lowerPrice);
+        model.addAttribute("upperPrice", upperPrice);
+        model.addAttribute("maxPrice", maxPrice);
 
         return "product-details";
     }

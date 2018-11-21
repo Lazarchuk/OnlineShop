@@ -41,7 +41,7 @@
 							<c:if test="${sessionScope.sessionUser ne null}">
                                 <div class="btn-group">
                                     <h5 class="sessionUser">You logined as: ${sessionScope.sessionUser.name}</h5>
-									<form class="logoutForm" action="profile" method="post"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
+									<form class="logoutForm" action="profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
                                 </div>
                             </c:if>
 						</div>
@@ -80,7 +80,7 @@
 									<form action="home">
 										<span class="panel-title">
 											<select name="category">
-												<option value="All" <c:out value="${category eq 'All' ? 'selected':''}"/>></option>
+												<option value="All" <c:out value="${category eq 'All' ? 'selected':''}"/>>All</option>
 												<c:forEach items="${categories}" var="categ">
 													<option value="${categ}">${categ}</option>
 												</c:forEach>
@@ -90,7 +90,21 @@
 									</form>
 								</div>
 							</div>
-						</div><!--/category-products-->		
+						</div><!--/category-products-->
+
+						<div class="price-range"><!--price-range-->
+						<h2>Price Range</h2>
+						<div class="well text-center">
+							<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="${maxPrice}" data-slider-step="10" data-slider-value="[${lowerPrice},${upperPrice}]" id="sl2" ><br />
+							<b class="pull-left">$ 0</b> <b class="pull-right">$ ${maxPrice}</b>
+							<div id="form_but">	
+								<form class="priceform" action="home" method="GET">
+									<input type="hidden" name="price_range" value="" id="hidden_price"/>
+									<button class="submit-category" type="submit"><img src="static/images/submit_category.png" width="40" height="30"/></button>
+								</form>
+							</div>
+						</div>
+					</div><!--/price-range-->						
 
 					</div>
 				</div>
@@ -154,6 +168,17 @@
 </body>
 </html>
 <script>
+var slider = document.getElementById('price_range');
+var priceRange = document.getElementById('hidden_price');
+priceRange.value = slider.innerHTML;
+document.getElementById('form_but').addEventListener('mouseover', listenPrice);
+
+function listenPrice(){
+	var slider = document.getElementById('price_range');
+	var priceRange = document.getElementById('hidden_price');
+	priceRange.value = slider.innerHTML;
+}
+
 function addToCart(id){
 	$.ajax({
 	  type: "POST",

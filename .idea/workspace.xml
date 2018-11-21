@@ -2,16 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45118f2-8d3a-4646-89fc-60adb33edf41" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/OnlineShop.iml" afterPath="$PROJECT_DIR$/OnlineShop.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop.war" afterPath="$PROJECT_DIR$/target/OnlineShop.war" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/ProductDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/main.css" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/price-range.js" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/lib/mysql-connector-java-5.1.45.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/OnlineShop/static/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/main.css" afterPath="$PROJECT_DIR$/target/OnlineShop/static/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/OnlineShop/static/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/OnlineShop/static/js/price-range.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/ProductDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/classes/static/js/price-range.js" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +65,41 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDetailsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQLProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1870">
+              <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -36,28 +108,8 @@
       <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CookieController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/CookieController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -81,6 +133,13 @@
       <find>factory</find>
       <find>updateUs</find>
       <find>OnlineShop</find>
+      <find>div class=&quot;tooltip-inner&quot;</find>
+      <find>price_</find>
+      <find>well</find>
+      <find>tooltip top</find>
+      <find>tooltip</find>
+      <find>class=&quot;tooltip&quot;</find>
+      <find>slider-tra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/Config.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/UserSignUp.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/RegionDAO.java" />
@@ -112,12 +170,16 @@
         <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
       </list>
     </option>
   </component>
@@ -151,10 +213,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="514" />
-    <option name="y" value="103" />
-    <option name="width" value="1055" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -172,8 +234,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -222,6 +282,15 @@
               <item name="OnlineShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,6 +300,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OnlineShop" type="b2602c69:ProjectViewProjectNode" />
@@ -260,10 +338,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CookieExample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PriceRangeExample" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -397,12 +477,14 @@
       <workItem from="1542053181131" duration="40000" />
       <workItem from="1542310855570" duration="96000" />
       <workItem from="1542311542059" duration="85000" />
-      <workItem from="1542468367460" duration="2345000" />
+      <workItem from="1542468367460" duration="8123000" />
+      <workItem from="1542739605026" duration="5014000" />
+      <workItem from="1542832248730" duration="187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9450000" />
+    <option name="totallyTimeSpent" value="20429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -414,17 +496,16 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23146747" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1452345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -437,6 +518,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,27 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/model/UserSignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
@@ -637,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/RegionDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -750,21 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -781,12 +820,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="-170">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <marker date="1541482462000" expanded="true" signature="3844:3852" ph="{...}" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,19 +838,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+        <state relative-caret-position="-15908">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="6" column="3754" lean-forward="false" selection-start-line="6" selection-start-column="3754" selection-end-line="6" selection-end-column="3754" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/price-range.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
