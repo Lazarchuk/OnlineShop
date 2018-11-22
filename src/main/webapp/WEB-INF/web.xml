@@ -46,4 +46,11 @@
     <error-code>404</error-code>
     <location>/static/404.jsp</location>
   </error-page>
+
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/myshop</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
 </web-app>

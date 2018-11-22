@@ -50,7 +50,7 @@ public class ProductController {
         // Try to find user by cookie
         CookieController.findUserByCookie(emailCookie, passwordCookie, session);
 
-        if (category != null && !category.equals("All")){
+        if (!category.equals("") && !category.equals("All")){
             categories = productDAO.getCategories();
             products = productDAO.getProductsByCategory(category);
             maxPrice = productDAO.getMaxPrice();
@@ -75,6 +75,7 @@ public class ProductController {
                                        @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie){
         // Try to find user by cookie
         CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+
         if (!range.equals("")){
             String[] priceValues = range.split(" : ");
             lowerPrice = priceValues[0];
@@ -87,6 +88,37 @@ public class ProductController {
             model.addAttribute("maxPrice", maxPrice);
             model.addAttribute("products", products);
             model.addAttribute("categories", categories);
+        }
+        else {
+            initPage(emailCookie, passwordCookie, model, session);
+        }
+        return "index";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, params = {"category", "price_range"})
+    public String productsByCategoryAndPrice(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+                                             @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
+                                             @RequestParam("category") String category, @RequestParam("price_range") String range,
+                                             HttpSession session, ModelMap model){
+        // Try to find user by cookie
+        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+
+        if (!range.equals("") && !category.equals("") && !category.equals("All")){
+            String[] priceValues = range.split(" : ");
+            lowerPrice = priceValues[0];
+            upperPrice = priceValues[1];
+            products = productDAO.getProductsByCategoryAndPrice(category, lowerPrice, upperPrice);
+            categories = productDAO.getCategories();
+            maxPrice = productDAO.getMaxPrice();
+            model.addAttribute("lowerPrice", lowerPrice);
+            model.addAttribute("upperPrice", upperPrice);
+            model.addAttribute("maxPrice", maxPrice);
+            model.addAttribute("products", products);
+            model.addAttribute("categories", categories);
+            model.addAttribute("category", category);
+        }
+        else if (!category.equals("") && category.equals("All")){
+            productsByPriceRange(range,session, model, emailCookie, passwordCookie);
         }
         else {
             initPage(emailCookie, passwordCookie, model, session);

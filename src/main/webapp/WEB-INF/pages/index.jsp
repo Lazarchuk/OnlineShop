@@ -80,7 +80,7 @@
 							<div class="panel-heading">
 								<form action="home">
 									<span class="panel-title">
-										<select name="category">
+										<select name="category" id="selection_categ">
 											<option value="All" <c:out value="${category eq 'All' ? 'selected':''}"/>>All</option>
 											<c:forEach items="${categories}" var="categ">
 												<option value="${categ}" <c:out value="${category eq categ ? 'selected':''}"/>>${categ}</option>
@@ -106,6 +106,14 @@
 							</div>
 						</div>
 					</div><!--/price-range-->
+					
+					<div class="filter" id="filter_but">	
+						<form class="priceform" action="home" method="GET">
+							<input type="hidden" name="category" value="" id="filter_category"/>
+							<input type="hidden" name="price_range" value="" id="filter_price"/>
+							<button class="submit-category" type="submit"><img src="static/images/submit_category.png" width="40" height="30"/></button>
+						</form>
+					</div>
 
 				</div>
 			</div>
@@ -173,11 +181,21 @@ var slider = document.getElementById('price_range');
 var priceRange = document.getElementById('hidden_price');
 priceRange.value = slider.innerHTML;
 document.getElementById('form_but').addEventListener('mouseover', listenPrice);
+document.getElementById('filter_but').addEventListener('mouseover', allFilter);
 
 function listenPrice(){
 	var slider = document.getElementById('price_range');
 	var priceRange = document.getElementById('hidden_price');
 	priceRange.value = slider.innerHTML;
+}
+
+function allFilter(){
+	var slider = document.getElementById('price_range');
+	var selection = document.getElementById('selection_categ');
+	var priceRange = document.getElementById('filter_price');
+	var categ = document.getElementById('filter_category');
+	priceRange.value = slider.innerHTML;
+	categ.value = selection.value;
 }
 
 

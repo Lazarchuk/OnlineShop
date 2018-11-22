@@ -2,55 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45118f2-8d3a-4646-89fc-60adb33edf41" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OnlineShop.iml" afterPath="$PROJECT_DIR$/OnlineShop.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLFactory.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLFactory.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop.war" afterPath="$PROJECT_DIR$/target/OnlineShop.war" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLFactory.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLFactory.class" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/ProductDAO.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/main.css" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/js/price-range.js" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/lib/mysql-connector-java-5.1.45.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/OnlineShop/static/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/main.css" afterPath="$PROJECT_DIR$/target/OnlineShop/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/OnlineShop/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/OnlineShop/static/js/price-range.js" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/web.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLFactory.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLFactory.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/ProductDAO.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/price-range.js" afterPath="$PROJECT_DIR$/target/classes/static/js/price-range.js" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,22 +34,9 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
+            <state relative-caret-position="17">
               <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetailsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +44,7 @@
       <file leaf-file-name="MySQLProduct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
+            <state relative-caret-position="1785">
               <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
               <folding />
             </state>
@@ -98,18 +54,18 @@
       <file leaf-file-name="ProductDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="170">
+              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="117">
+              <caret line="119" column="41" lean-forward="false" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -178,8 +134,8 @@
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/price-range.js" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
       </list>
     </option>
   </component>
@@ -233,8 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,8 +293,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,11 +436,12 @@
       <workItem from="1542468367460" duration="8123000" />
       <workItem from="1542739605026" duration="5014000" />
       <workItem from="1542832248730" duration="187000" />
+      <workItem from="1542915436120" duration="2206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20429000" />
+    <option name="totallyTimeSpent" value="22635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -503,7 +460,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22541603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -834,14 +791,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="170">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -855,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
+        <state relative-caret-position="1785">
           <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
           <folding />
         </state>
@@ -875,30 +831,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="-36">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#838#839#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="17">
           <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="117">
+          <caret line="119" column="41" lean-forward="false" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -149,4 +149,28 @@ public class MySQLProduct implements ProductDAO {
         }
         return products;
     }
+
+    @Override
+    public List<Product> getProductsByCategoryAndPrice(String category, String lowerPrice, String upperPrice) {
+        String sql = "SELECT id, name, description, price, category FROM products WHERE category=? AND price BETWEEN ? AND ?";
+        List<Product> products = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(sql)){
+            ps.setString(1, category);
+            ps.setInt(2, Integer.parseInt(lowerPrice));
+            ps.setInt(3, Integer.parseInt(upperPrice));
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()){
+                Product product = new Product();
+                product.setId(resultSet.getInt("id"));
+                product.setName(resultSet.getString("name"));
+                product.setDescription(resultSet.getString("description"));
+                product.setPrice(resultSet.getInt("price"));
+                product.setCategory(resultSet.getString("category"));
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
 }

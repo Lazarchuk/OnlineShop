@@ -3,6 +3,11 @@ package online.shop.dao;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import online.shop.model.Config;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,29 +18,14 @@ import java.sql.SQLException;
 public class MySQLFactory extends DataAbstractFactory {
     private Connection connection;
 
-    private Config config;
     public MySQLFactory() {
-        config = new Config();
-        Class[] classes = new Class[]{Config.class};
-        XStream xs = new XStream(new DomDriver());
-        XStream.setupDefaultSecurity(xs);
-        xs.allowTypes(classes);
         try {
-            xs.fromXML(new FileInputStream(new File("config.xml")), config);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection(config.getHost(), config.getUsername(), config.getPassword());
-
-        } catch (ClassNotFoundException e) {
+            Context initialContext = new InitialContext();
+            DataSource dataSource = (DataSource) initialContext.lookup("java:comp/env/jdbc/myshop");
+            connection = dataSource.getConnection();
+        } catch (NamingException e) {
             e.printStackTrace();
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
             e.printStackTrace();
         }
     }

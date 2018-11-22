@@ -894,6 +894,25 @@ h2.title:before{
     border: 0 none;
 }
 
+.filter {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  min-height: 20px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.filter .submit-category {
+    width: 40px;
+    height: 30px;
+    margin-left: 20px;
+    padding: 0;
+    border: 0 none;
+}
+
 .well .priceform {
     margin-top: 25px;
     text-align: right;
