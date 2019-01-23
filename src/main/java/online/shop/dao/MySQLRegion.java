@@ -1,5 +1,7 @@
 package online.shop.dao;
 
+import online.shop.dao.impl.RegionDAO;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

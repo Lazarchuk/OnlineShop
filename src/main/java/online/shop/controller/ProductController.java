@@ -1,34 +1,43 @@
 package online.shop.controller;
 
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.ProductDAO;
+import online.shop.dao.impl.UserDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import online.shop.model.*;
-import online.shop.dao.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-@Controller
-@RequestMapping("/home")
+@RestController
 public class ProductController {
+    @Autowired
+    private DataAbstractFactory factory;
     private List<Product> products;
     private List<String> categories;
-    private DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
-    private ProductDAO productDAO = factory.getProductDAO();
     private String maxPrice;
     private String lowerPrice;
     private String upperPrice;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String initPage(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
-                           @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
-                           ModelMap model, HttpSession session){
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    public ModelAndView initPage(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+                                 @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
+                                 ModelMap model, HttpSession session){
+        ProductDAO productDAO = factory.getProductDAO();
+
         // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        if (session.getAttribute("sessionUser") == null){
+            UserDAO userDAO = factory.getUserDAO();
+            User user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }
 
         categories = productDAO.getCategories();
         products = productDAO.getAllProducts();
@@ -40,15 +49,14 @@ public class ProductController {
         model.addAttribute("lowerPrice", lowerPrice);
         model.addAttribute("upperPrice", upperPrice);
         model.addAttribute("maxPrice", maxPrice);
-        return "index";
+        return new ModelAndView("index");
     }
 
-    @RequestMapping(method = RequestMethod.GET, params = {"category"})
-    public String productsByCategory(@RequestParam("category") String category, ModelMap model, HttpSession session,
+    @RequestMapping(value = "/products", method = RequestMethod.GET, params = {"category"})
+    public ModelAndView productsByCategory(@RequestParam("category") String category, ModelMap model, HttpSession session,
                             @CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                             @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie){
-        // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        ProductDAO productDAO = factory.getProductDAO();
 
         if (!category.equals("") && !category.equals("All")){
             categories = productDAO.getCategories();
@@ -66,15 +74,14 @@ public class ProductController {
         else {
             initPage(emailCookie, passwordCookie, model, session);
         }
-        return "index";
+        return new ModelAndView("index");
     }
 
-    @RequestMapping(method = RequestMethod.GET, params = "price_range")
-    public String productsByPriceRange(@RequestParam("price_range") String range, HttpSession session, ModelMap model,
+    @RequestMapping(value = "/products", method = RequestMethod.GET, params = "price_range")
+    public ModelAndView productsByPriceRange(@RequestParam("price_range") String range, HttpSession session, ModelMap model,
                                        @CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                                        @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie){
-        // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        ProductDAO productDAO = factory.getProductDAO();
 
         if (!range.equals("")){
             String[] priceValues = range.split(" : ");
@@ -92,16 +99,15 @@ public class ProductController {
         else {
             initPage(emailCookie, passwordCookie, model, session);
         }
-        return "index";
+        return new ModelAndView("index");
     }
 
-    @RequestMapping(method = RequestMethod.GET, params = {"category", "price_range"})
-    public String productsByCategoryAndPrice(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
+    @RequestMapping(value = "/products", method = RequestMethod.GET, params = {"category", "price_range"})
+    public ModelAndView productsByCategoryAndPrice(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                                              @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
                                              @RequestParam("category") String category, @RequestParam("price_range") String range,
                                              HttpSession session, ModelMap model){
-        // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        ProductDAO productDAO = factory.getProductDAO();
 
         if (!range.equals("") && !category.equals("") && !category.equals("All")){
             String[] priceValues = range.split(" : ");
@@ -117,13 +123,42 @@ public class ProductController {
             model.addAttribute("categories", categories);
             model.addAttribute("category", category);
         }
-        else if (!category.equals("") && category.equals("All")){
-            productsByPriceRange(range,session, model, emailCookie, passwordCookie);
+        else if (!range.equals("") && !category.equals("") && category.equals("All")){
+            String[] priceValues = range.split(" : ");
+            lowerPrice = priceValues[0];
+            upperPrice = priceValues[1];
+            products = productDAO.getProductsByPriceRange(lowerPrice, upperPrice);
+            categories = productDAO.getCategories();
+            maxPrice = productDAO.getMaxPrice();
+            model.addAttribute("lowerPrice", lowerPrice);
+            model.addAttribute("upperPrice", upperPrice);
+            model.addAttribute("maxPrice", maxPrice);
+            model.addAttribute("products", products);
+            model.addAttribute("categories", categories);
+            model.addAttribute("category", category);
         }
         else {
             initPage(emailCookie, passwordCookie, model, session);
         }
-        return "index";
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping("/products/details/{id}")
+    public ModelAndView productDetails(@PathVariable("id") String id, ModelMap model){
+        ProductDAO productDAO = factory.getProductDAO();
+        int productId = Integer.parseInt(id);
+        List<String> categories = productDAO.getCategories();
+        String maxPrice = productDAO.getMaxPrice();
+        String upperPrice = maxPrice;
+        String lowerPrice = "0";
+
+        Product product = productDAO.getProduct(productId);
+        model.addAttribute("product", product);
+        model.addAttribute("categories", categories);
+        model.addAttribute("lowerPrice", lowerPrice);
+        model.addAttribute("upperPrice", upperPrice);
+        model.addAttribute("maxPrice", maxPrice);
+        return new ModelAndView("product-details");
     }
 
 }

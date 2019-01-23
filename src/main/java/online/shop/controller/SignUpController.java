@@ -1,10 +1,12 @@
 package online.shop.controller;
 
-import online.shop.dao.DataAbstractFactory;
-import online.shop.dao.RegionDAO;
-import online.shop.dao.UserDAO;
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.RegionDAO;
+import online.shop.dao.impl.UserDAO;
 import online.shop.model.User;
 import online.shop.model.UserSignUp;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -19,20 +21,29 @@ import java.util.regex.Pattern;
 @Controller
 @RequestMapping("/signup")
 public class SignUpController {
+    @Autowired
+    private DataAbstractFactory factory;
+
     private static final String EMAIL_PATTERN =
             "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                     + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     private List<String> errors;
     private List<String> regions;
-    private DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
-    private RegionDAO regionDAO = factory.getRegionDAO();
 
     @RequestMapping(method = RequestMethod.GET)
     public String initForm(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                            @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
                            ModelMap model, HttpSession session){
+        RegionDAO regionDAO = factory.getRegionDAO();
+
         // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        if (session.getAttribute("sessionUser") == null){
+            UserDAO userDAO = factory.getUserDAO();
+            User user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }
 
         if (session.getAttribute("sessionUser") != null){
             return "redirect:profile";
@@ -48,6 +59,7 @@ public class SignUpController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String regUser(HttpSession session, ModelMap model, UserSignUp newUserForm){
+        RegionDAO regionDAO = factory.getRegionDAO();
         UserDAO userDAO = factory.getUserDAO();
         regions = regionDAO.getRegions();
         boolean validForm = true;

@@ -1,5 +1,10 @@
 package online.shop.controller;
 
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.RegionDAO;
+import online.shop.dao.impl.UserDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -7,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import online.shop.model.*;
-import online.shop.dao.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -25,12 +29,13 @@ import java.util.regex.Pattern;
 @Controller
 @RequestMapping("/profile")
 public class UserProfileController {
+    @Autowired
+    private DataAbstractFactory factory;
+
     private static final String EMAIL_PATTERN =
             "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                     + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    //private boolean isDeniedAccess;
-    //private String message;
-    private DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
+
     private UserDAO userDAO;
     private RegionDAO regionDAO;
     private List<String> errors;
@@ -40,7 +45,13 @@ public class UserProfileController {
                            @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
                            HttpSession session, ModelMap model) {
         // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        if (session.getAttribute("sessionUser") == null){
+            UserDAO userDAO = factory.getUserDAO();
+            User user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }
 
         if (session.getAttribute("sessionUser") != null){
             regionDAO = factory.getRegionDAO();

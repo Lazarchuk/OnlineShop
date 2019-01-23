@@ -1,8 +1,10 @@
 package online.shop.controller;
 
-import online.shop.dao.DataAbstractFactory;
-import online.shop.dao.UserDAO;
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.UserDAO;
 import online.shop.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -17,16 +19,24 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
+    @Autowired
+    private DataAbstractFactory factory;
+
     private boolean isDeniedAccess;
     private String message;
-    DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
 
     @RequestMapping(method = RequestMethod.GET)
     public String initPage(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                            @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
                            ModelMap model, HttpSession session){
         // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        if (session.getAttribute("sessionUser") == null){
+            UserDAO userDAO = factory.getUserDAO();
+            User user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }
 
         if (session.getAttribute("sessionUser") == null) {
             isDeniedAccess = false;

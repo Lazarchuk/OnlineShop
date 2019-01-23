@@ -1,7 +1,10 @@
 package online.shop.controller;
 
-import online.shop.dao.*;
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.ProductDAO;
+import online.shop.dao.impl.UserDAO;
 import online.shop.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -13,17 +16,23 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/cart")
 public class CartController {
-    private DataAbstractFactory factory = DataAbstractFactory.getFactory("mysql");
-    private ProductDAO productDAO = factory.getProductDAO();
+
+    @Autowired
+    private DataAbstractFactory factory;
 
     //loads cart content
     @RequestMapping(method = RequestMethod.GET)
     public String initPage(@CookieValue(value = "userEmailCookie", defaultValue = "default") String emailCookie,
                            @CookieValue(value = "userPassCookie", defaultValue = "default") String passwordCookie,
                            HttpSession session , ModelMap model){
-
         // Try to find user by cookie
-        CookieController.findUserByCookie(emailCookie, passwordCookie, session);
+        if (session.getAttribute("sessionUser") == null){
+            UserDAO userDAO = factory.getUserDAO();
+            User user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }
 
         Cart cart = null;
         if (session.getAttribute("cart") != null){
@@ -41,6 +50,7 @@ public class CartController {
     @RequestMapping(method = RequestMethod.POST, params = {"productId", "prodAmount"})
     public String loadCart(@RequestParam("productId") String productId, @RequestParam("prodAmount") String prodAmount,
                            HttpSession session){
+        ProductDAO productDAO = factory.getProductDAO();
         int productAmount = 0;
         if (prodAmount != null){
             productAmount = Integer.parseInt(prodAmount);

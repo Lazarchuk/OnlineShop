@@ -10,22 +10,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Product Details</title>
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="static/css/prettyPhoto.css" rel="stylesheet">
-    <link href="static/css/price-range.css" rel="stylesheet">
-    <link href="static/css/animate.css" rel="stylesheet">
-	<link href="static/css/main.css" rel="stylesheet">
-	<link href="static/css/responsive.css" rel="stylesheet">
+    <link href="/OnlineShop/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/OnlineShop/resources/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/OnlineShop/resources/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/OnlineShop/resources/css/price-range.css" rel="stylesheet">
+    <link href="/OnlineShop/resources/css/animate.css" rel="stylesheet">
+	<link href="/OnlineShop/resources/css/main.css" rel="stylesheet">
+	<link href="/OnlineShop/resources/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="static/js/html5shiv.js"></script>
     <script src="static/js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="static/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="static/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/OnlineShop/resources/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/OnlineShop/resources/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/OnlineShop/resources/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/OnlineShop/resources/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/OnlineShop/resources/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -41,7 +41,7 @@
 							<c:if test="${sessionScope.sessionUser ne null}">
                                 <div class="btn-group">
                                     <h5 class="sessionUser">You logined as: ${sessionScope.sessionUser.name}</h5>
-									<form class="logoutForm" action="profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
+									<form class="logoutForm" action="/OnlineShop/profile" method="POST"><button type="submit" class="btn btn-default but_log" name="logout" value="logout">Logout</button></form>
                                 </div>
                             </c:if>
 						</div>
@@ -49,16 +49,16 @@
 					<div class="col-sm-6">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="home">Home</a></li>
-								<li><a href="cart">Cart</a></li>
+								<li><a href="/OnlineShop/products">Products</a></li>
+								<li><a href="/OnlineShop/cart">Cart</a></li>
 								
 								<c:if test="${sessionScope.sessionUser eq null}">
-									<li><a href="signup">SignUp</a></li>
-									<li><a href="login">Login</a></li>
+									<li><a href="/OnlineShop/signup">SignUp</a></li>
+									<li><a href="/OnlineShop/login">Login</a></li>
 								</c:if>
 								
 								<c:if test="${sessionScope.sessionUser ne null}">
-									<li><a href="profile">Profile</a></li>
+									<li><a href="/OnlineShop/profile">Profile</a></li>
 								</c:if>
 							</ul>
 						</div>
@@ -77,16 +77,16 @@
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<form action="home">
+									<form action="/OnlineShop/products">
 										<span class="panel-title">
-											<select name="category">
+											<select name="category" id="selection_categ">
 												<option value="All" <c:out value="${category eq 'All' ? 'selected':''}"/>>All</option>
 												<c:forEach items="${categories}" var="categ">
 													<option value="${categ}">${categ}</option>
 												</c:forEach>
 											</select>
 										</span>
-										<button class="submit-category" type="submit"><img src="static/images/submit_category.png" width="40" height="30"/></button>
+										<button class="submit-category" type="submit"><img src="/OnlineShop/resources/images/submit_category.png" width="40" height="30"/></button>
 									</form>
 								</div>
 							</div>
@@ -98,13 +98,21 @@
 							<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="${maxPrice}" data-slider-step="10" data-slider-value="[${lowerPrice},${upperPrice}]" id="sl2" ><br />
 							<b class="pull-left">$ 0</b> <b class="pull-right">$ ${maxPrice}</b>
 							<div id="form_but">	
-								<form class="priceform" action="home" method="GET">
+								<form class="priceform" action="/OnlineShop/products" method="GET">
 									<input type="hidden" name="price_range" value="" id="hidden_price"/>
-									<button class="submit-category" type="submit"><img src="static/images/submit_category.png" width="40" height="30"/></button>
+									<button class="submit-category" type="submit"><img src="/OnlineShop/resources/images/submit_category.png" width="40" height="30"/></button>
 								</form>
 							</div>
 						</div>
-					</div><!--/price-range-->						
+					</div><!--/price-range-->
+
+					<div class="filter" id="filter_but">	
+						<form class="priceform" action="/OnlineShop/products" method="GET">
+							<input type="hidden" name="category" value="" id="filter_category"/>
+							<input type="hidden" name="price_range" value="" id="filter_price"/>
+							<button class="submit-category" type="submit"><img src="/OnlineShop/resources/images/submit_category.png" width="40" height="30"/></button>
+						</form>
+					</div>					
 
 					</div>
 				</div>
@@ -114,7 +122,7 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="static/images/products/${product.id}.jpg" alt="" />
+								<img src="/OnlineShop/resources/images/products/${product.id}.jpg" alt="" />
 							</div>
 					
 						</div>
@@ -159,12 +167,12 @@
 	
 
   
-    <script src="static/js/jquery.js"></script>
-	<script src="static/js/price-range.js"></script>
-    <script src="static/js/jquery.scrollUp.min.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/jquery.prettyPhoto.js"></script>
-    <script src="static/js/main.js"></script>
+    <script src="/OnlineShop/resources/js/jquery.js"></script>
+	<script src="/OnlineShop/resources/js/price-range.js"></script>
+    <script src="/OnlineShop/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/OnlineShop/resources/js/bootstrap.min.js"></script>
+    <script src="/OnlineShop/resources/js/jquery.prettyPhoto.js"></script>
+    <script src="/OnlineShop/resources/js/main.js"></script>
 </body>
 </html>
 <script>
@@ -172,11 +180,21 @@ var slider = document.getElementById('price_range');
 var priceRange = document.getElementById('hidden_price');
 priceRange.value = slider.innerHTML;
 document.getElementById('form_but').addEventListener('mouseover', listenPrice);
+document.getElementById('filter_but').addEventListener('mouseover', allFilter);
 
 function listenPrice(){
 	var slider = document.getElementById('price_range');
 	var priceRange = document.getElementById('hidden_price');
 	priceRange.value = slider.innerHTML;
+}
+
+function allFilter(){
+	var slider = document.getElementById('price_range');
+	var selection = document.getElementById('selection_categ');
+	var priceRange = document.getElementById('filter_price');
+	var categ = document.getElementById('filter_category');
+	priceRange.value = slider.innerHTML;
+	categ.value = selection.value;
 }
 
 function addToCart(id){

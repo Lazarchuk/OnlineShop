@@ -1,5 +1,6 @@
 package online.shop.dao;
 
+import online.shop.dao.impl.ProductDAO;
 import online.shop.model.Product;
 
 import java.sql.*;

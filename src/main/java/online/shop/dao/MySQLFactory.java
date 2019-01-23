@@ -1,30 +1,24 @@
 package online.shop.dao;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-import online.shop.model.Config;
+import online.shop.dao.impl.DataAbstractFactory;
+import online.shop.dao.impl.ProductDAO;
+import online.shop.dao.impl.RegionDAO;
+import online.shop.dao.impl.UserDAO;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MySQLFactory extends DataAbstractFactory {
     private Connection connection;
 
-    public MySQLFactory() {
+    public MySQLFactory(DriverManagerDataSource dataSource) {
         try {
-            Context initialContext = new InitialContext();
-            DataSource dataSource = (DataSource) initialContext.lookup("java:comp/env/jdbc/myshop");
             connection = dataSource.getConnection();
-        } catch (NamingException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -10,23 +10,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Cart</title>
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="static/css/prettyPhoto.css" rel="stylesheet">
-    <link href="static/css/price-range.css" rel="stylesheet">
-    <link href="static/css/animate.css" rel="stylesheet">
-	<link href="static/css/main.css" rel="stylesheet">
-	<link href="static/css/responsive.css" rel="stylesheet">
+    <title>Cart</title>	
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link href="resources/css/prettyPhoto.css" rel="stylesheet">
+    <link href="resources/css/price-range.css" rel="stylesheet">
+    <link href="resources/css/animate.css" rel="stylesheet">
+	<link href="resources/css/main.css" rel="stylesheet">
+	<link href="resources/css/responsive.css" rel="stylesheet">
+	
     <!--[if lt IE 9]>
     <script src="static/js/html5shiv.js"></script>
     <script src="static/js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="static/images/ico/favicon.ico">
+    <![endif]-->  
+	
+    <!-- <link rel="shortcut icon" href="static/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="static/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="static/images/ico/apple-touch-icon-57-precomposed.png"> -->
+	
+	<link rel="shortcut icon" href="resources/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="resources/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="resources/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resources/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="resources/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -50,7 +58,7 @@
 					<div class="col-sm-6">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="home">Home</a></li>
+								<li><a href="products">Products</a></li>
 								<li><a href="cart">Cart</a></li>
 								
 								<c:if test="${sessionScope.sessionUser eq null}">
@@ -89,7 +97,7 @@
 							<c:set var="prodAmount" value="${prod.value}"/>
 							<tr>
 								<td class="cart_product">
-									<a href=""><img src="static/images/products/${prod.key.id}.jpg" width="140" alt=""></a>
+									<a href="products/details/${prod.key.id}"><img src="resources/images/products/${prod.key.id}.jpg" width="140" alt=""></a>
 								</td>
 								<td class="cart_description">
 									<h4><a href="">${prod.key.name}</a></h4>
@@ -101,10 +109,10 @@
 									<form action="cart" method="POST">
 									<div class="cart_quantity_button">
 										<input type="hidden" name="reWriteId" value="${prod.key.id}">
-										<img class="cart_quantity_up" src="static/images/minus.png" onclick="decreaseAmount(${prod.key.id})">
+										<img class="cart_quantity_up" src="resources/images/minus.png" onclick="decreaseAmount(${prod.key.id})">
 										<input class="cart_quantity_input" type="text" id="${prod.key.id}" name="prodAmount" value="${prod.value}" autocomplete="off" size="2">
-										<img class="cart_quantity_down" src="static/images/plus.png" onclick="increaseAmount(${prod.key.id})">
-										<div><button class="update-btn" type="submit" id="${prod.key.id}but"><img src="static/images/update.png" style="margin:2px"></button></div>
+										<img class="cart_quantity_down" src="resources/images/plus.png" onclick="increaseAmount(${prod.key.id})">
+										<div><button class="update-btn" type="submit" id="${prod.key.id}but"><img src="resources/images/update.png" style="margin:2px"></button></div>
 									</div>
 									</form>
 								</td>
@@ -155,13 +163,11 @@
 		</div>
 	</footer><!--/Footer-->
 	
-
-
-    <script src="static/js/jquery.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-	<script src="static/js/jquery.scrollUp.min.js"></script>
-    <script src="static/js/jquery.prettyPhoto.js"></script>
-    <script src="static/js/main.js"></script>
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/jquery.scrollUp.min.js"></script>
+    <script src="resources/js/jquery.prettyPhoto.js"></script>
+    <script src="resources/js/main.js"></script>
 </body>
 </html>
 

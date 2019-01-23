@@ -1,5 +1,6 @@
 package online.shop.dao;
 
+import online.shop.dao.impl.UserDAO;
 import online.shop.model.User;
 import online.shop.model.UserAddInfo;
 import online.shop.model.UserMainInfo;
@@ -48,6 +49,19 @@ public class MySQLUser implements UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return user;
+    }
+
+    @Override
+    public User findUserByCookie(String emailCookie, String passwordCookie){
+        User user = null;
+        /*if (!emailCookie.equals("default") || !passwordCookie.equals("default")){
+            UserDAO userDAO = factory.getUserDAO();
+            user = userDAO.getUser(emailCookie, passwordCookie);
+            if (user != null){
+                session.setAttribute("sessionUser", user);
+            }
+        }*/
         return user;
     }
 
