@@ -1,6 +1,6 @@
 package online.shop.dao.impl;
 
-import online.shop.dao.MySQLFactory;
+import online.shop.service.MySQLFactory;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 public abstract class DataAbstractFactory {

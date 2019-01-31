@@ -3,10 +3,10 @@ package online.shop.controller;
 import online.shop.dao.impl.DataAbstractFactory;
 import online.shop.dao.impl.RegionDAO;
 import online.shop.dao.impl.UserDAO;
+import online.shop.model.FormValidator;
 import online.shop.model.User;
-import online.shop.model.UserSignUp;
+import online.shop.model.springforms.UserSignUp;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -24,10 +24,6 @@ public class SignUpController {
     @Autowired
     private DataAbstractFactory factory;
 
-    private static final String EMAIL_PATTERN =
-            "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    private List<String> errors;
     private List<String> regions;
 
     @RequestMapping(method = RequestMethod.GET)
@@ -63,16 +59,16 @@ public class SignUpController {
         UserDAO userDAO = factory.getUserDAO();
         regions = regionDAO.getRegions();
         boolean validForm = true;
+        FormValidator validator = new FormValidator();
         if (userDAO.findEmail(newUserForm.getEmail())){
-            errors = new ArrayList<>();
+            List<String> errors = new ArrayList<>();
             errors.add("This email already registered");
             validForm = false;
             model.addAttribute("errors", errors);
             model.addAttribute("regions", regions);
         }
         else {
-
-            if (isValidRegUser(newUserForm)){
+            if (validator.isValidRegUser(newUserForm, userDAO)){
                 User user = new User();
                 user.setEmail(newUserForm.getEmail().toLowerCase());
                 user.setPassword(newUserForm.getPassword());
@@ -90,74 +86,13 @@ public class SignUpController {
             }
             else {
                 validForm = false;
-                model.addAttribute("errors", errors);
+                model.addAttribute("errors", validator.getErrors());
                 model.addAttribute("regions", regions);
             }
         }
         model.addAttribute("validForm", validForm);
         model.addAttribute("newUserForm", newUserForm);
         return "signup";
-    }
-
-    private boolean isValidRegUser(UserSignUp newUserForm) {
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(newUserForm.getEmail());
-        boolean valid = true;
-        errors = new ArrayList<>();
-        if (newUserForm.getEmail().length() == 0){
-            errors.add("Enter your email");
-            valid = false;
-        }
-        if (newUserForm.getEmail().length() > 30){
-            errors.add("Email should consist up to 30 symbols");
-            valid = false;
-        }
-        if (!matcher.matches() && newUserForm.getEmail().length() != 0){
-            errors.add("Invalid email");
-            valid = false;
-        }
-        if (newUserForm.getPassword().length() == 0){
-            errors.add("Enter your password");
-            valid = false;
-        }
-        if ((newUserForm.getPassword().length() < 8 || newUserForm.getPassword().length() > 50) &&
-                newUserForm.getPassword().length() != 0){
-            errors.add("Password should consist with 8 to 50 symbols");
-            valid = false;
-        }
-        if (!newUserForm.getPassword().equals(newUserForm.getSubmitPass())){
-            errors.add("Wrong submit password");
-            valid = false;
-        }
-        if (newUserForm.getName().length() == 0){
-            errors.add("Enter your name");
-            valid = false;
-        }
-        if (newUserForm.getName().length() > 20){
-            errors.add("Name should consist up to 20 symbols");
-            valid = false;
-        }
-        if (newUserForm.getGender().equals("Unknown")){
-            errors.add("Choose gender");
-            valid = false;
-        }
-        if (newUserForm.getArea().equals("NONE")){
-            errors.add("Choose region");
-            valid = false;
-        }
-        if (newUserForm.getComment().length() == 0) {
-            errors.add("Leave your comment");
-            valid = false;
-        }
-        if (newUserForm.getComment().length() > 50){
-            errors.add("Comment should consist up to 50 symbols");
-            valid = false;
-        }
-        if (!newUserForm.isAgreement()){
-            errors.add("You should to agree to the terms and conditions");
-            valid = false;
-        }
-        return valid;
     }
 
 }

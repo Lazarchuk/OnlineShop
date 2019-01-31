@@ -153,7 +153,9 @@
 		</div>
 	</section>  <!--section-->
 	
-	<footer><!--/Footer-->
+	<%@include file="footer.jsp" %>
+
+	<!-- <footer>
 		<div class="container">
 			<div class="footer-bottom">
 				<div class="row">
@@ -163,7 +165,7 @@
 				</div>
 			</div>
 		</div>
-	</footer><!--/Footer-->
+	</footer> -->
 	
 
   

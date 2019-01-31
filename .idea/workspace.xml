@@ -2,162 +2,243 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45118f2-8d3a-4646-89fc-60adb33edf41" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/OnlineShop_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OnlineShop.iml" afterPath="$PROJECT_DIR$/OnlineShop.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/CookieController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/config/MyConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/config/MyConfiguration.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/DataAbstractFactory.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLFactory.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLRegion.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLRegion.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLUser.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/RegionDAO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/UserDAO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLFactory.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLRegion.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLUser.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/impl/DataAbstractFactory.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/impl/DataAbstractFactory.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/dao/impl/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/online/shop/dao/impl/UserDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/Config.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/UserAddInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/UserEdit.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/UserMainInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/UserPassword.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/online/shop/model/UserSignUp.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/404.jsp" afterPath="$PROJECT_DIR$/src/main/resources/static/404.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/blog-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/blog-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/blog-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/man-four.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/man-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/man-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/man-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blog/socials.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/cart/one.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/cart/three.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/cart/two.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/bg_border.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/gallery1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/gallery2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/gallery3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/gallery4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/girl1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/girl2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/girl3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/iframe1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/iframe2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/iframe3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/iframe4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/map.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/new.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/partner1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/partner2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/partner3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/partner4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/pricing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/product6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/recommend1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/recommend2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/recommend3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/sale.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/searchicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/home/shipping.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/new.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/rating.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/share.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/similar1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/similar2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/product-details/similar3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/advertisement.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product11.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product12.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/shop/product9.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product-details.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop.war" afterPath="$PROJECT_DIR$/target/OnlineShop.war" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/META-INF/context.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/CartController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/CartController.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/CookieController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/LoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductController.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/config/MyConfiguration.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/config/MyConfiguration.class" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/SignUpController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/SignUpController.class" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/UserProfileController.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/controller/UserProfileController.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/DataAbstractFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLFactory.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLFactory.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLRegion.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLRegion.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLUser.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/ProductDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/RegionDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/UserDAO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLFactory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLProduct.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLRegion.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/MySQLUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/impl/DataAbstractFactory.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/impl/DataAbstractFactory.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/impl/UserDAO.class" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/dao/impl/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/Config.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/UserAddInfo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/UserEdit.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/UserMainInfo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/UserPassword.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/online/shop/model/UserSignUp.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/404.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/404.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/blog-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/blog-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/blog-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/man-four.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/man-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/man-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/man-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/blog/socials.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/cart/one.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/cart/three.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/cart/two.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/bg_border.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/gallery1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/gallery2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/gallery3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/gallery4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/girl1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/girl2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/girl3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/iframe1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/iframe2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/iframe3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/iframe4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/map.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/new.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/partner1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/partner2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/partner3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/partner4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/pricing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/product6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/recommend1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/recommend2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/recommend3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/sale.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/searchicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/home/shipping.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/new.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/rating.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/share.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/similar1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/similar2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/product-details/similar3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/advertisement.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product11.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product12.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/classes/static/images/shop/product9.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/index.jsp" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/login.jsp" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/product-details.jsp" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/profile.jsp" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/pages/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/shop-servlet.xml" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/shop-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/shop-servlet.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/OnlineShop/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/404.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/animate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/prettyPhoto.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/price-range.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/css/responsive.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/404/404.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/blog-one.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/blog-three.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/blog-two.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/man-four.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/man-one.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/man-three.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/man-two.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/blog/socials.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/cart/one.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/cart/three.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/cart/two.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/bg_border.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/gallery1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/gallery2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/gallery3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/gallery4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/girl1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/girl2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/girl3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/iframe1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/iframe2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/iframe3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/iframe4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/map.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/new.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/partner1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/partner2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/partner3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/partner4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/pricing.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/product6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/recommend1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/recommend2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/recommend3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/sale.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/searchicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/home/shipping.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/new.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/rating.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/share.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/similar1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/similar2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/product-details/similar3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/products/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/products/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/products/3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/products/4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/advertisement.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product12.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/shop/product9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/submit_category.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/images/update.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/contact.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/gmaps.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/html5shiv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/jquery.prettyPhoto.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/jquery.scrollUp.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/OnlineShop/static/js/price-range.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/CartController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/CartController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/CookieController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/LoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/ProductDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/config/MyConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/config/MyConfiguration.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/SignUpController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/SignUpController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/online/shop/controller/UserProfileController.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/controller/UserProfileController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/DataAbstractFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLFactory.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLFactory.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLRegion.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLRegion.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLUser.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/ProductDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/RegionDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/UserDAO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLFactory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLProduct.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLRegion.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/MySQLUser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/impl/DataAbstractFactory.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/impl/DataAbstractFactory.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/dao/impl/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/online/shop/dao/impl/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/Config.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/UserAddInfo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/UserEdit.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/UserMainInfo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/UserPassword.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online/shop/model/UserSignUp.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/404.jsp" afterPath="$PROJECT_DIR$/target/classes/static/404.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/blog-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/blog-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/blog-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/man-four.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/man-one.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/man-three.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/man-two.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/blog/socials.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/cart/one.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/cart/three.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/cart/two.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/bg_border.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/gallery1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/gallery2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/gallery3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/gallery4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/girl1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/girl2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/girl3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/iframe1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/iframe2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/iframe3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/iframe4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/map.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/new.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/partner1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/partner2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/partner3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/partner4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/pricing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/product6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/recommend1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/recommend2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/recommend3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/sale.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/searchicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/home/shipping.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/new.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/rating.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/share.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/similar1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/similar2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/product-details/similar3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/advertisement.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product11.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product12.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shop/product9.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
@@ -171,11 +252,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="956">
+            <state relative-caret-position="-85">
               <caret line="100" column="16" lean-forward="false" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUpController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1360">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProfileController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/model/FormValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2482">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,40 +312,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="272">
               <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLProduct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-              <folding>
-                <marker date="1545283092000" expanded="true" signature="435:468" ph="SELECT * FRO... products" />
-                <marker date="1545283092000" expanded="true" signature="1307:1336" ph="SELECT categ... products" />
-                <marker date="1545283092000" expanded="true" signature="2035:2094" ph="SELECT id, n... products" />
-                <marker date="1545283092000" expanded="true" signature="3043:3109" ph="SELECT id, n... products" />
-                <marker date="1545283092000" expanded="true" signature="4048:4074" ph="SELECT price... products" />
-                <marker date="1545283092000" expanded="true" signature="4749:4836" ph="SELECT id, n... products" />
-                <marker date="1545283092000" expanded="true" signature="5849:5951" ph="SELECT id, n... products" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -235,8 +328,18 @@
             <state relative-caret-position="1921">
               <caret line="125" column="41" lean-forward="false" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
               <folding>
-                <marker date="1545283094000" expanded="true" signature="7833:7840" ph="{...}" />
+                <marker date="1548912160000" expanded="true" signature="7833:7840" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/config/MyConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -291,8 +394,6 @@
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/UserMainInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/UserAddInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/model/UserPassword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLUser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -306,6 +407,8 @@
         <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java" />
       </list>
     </option>
   </component>
@@ -338,7 +441,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -399,7 +502,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OnlineShop" type="b2602c69:ProjectViewProjectNode" />
@@ -408,7 +511,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OnlineShop" type="b2602c69:ProjectViewProjectNode" />
@@ -455,9 +558,9 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -610,15 +713,16 @@
       <workItem from="1544723484539" duration="603000" />
       <workItem from="1547745313262" duration="88000" />
       <workItem from="1548268816051" duration="187000" />
-      <workItem from="1548269054604" duration="146000" />
+      <workItem from="1548269054604" duration="568000" />
+      <workItem from="1548964208905" duration="444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35388000" />
+    <option name="totallyTimeSpent" value="36254000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -628,21 +732,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1580938" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -663,21 +767,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -853,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/model/UserMainInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -896,20 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/CookieController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -940,16 +1008,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/ProductDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="125" column="41" lean-forward="false" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-          <folding>
-            <marker date="1545283094000" expanded="true" signature="7833:7840" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -960,7 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="272">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
@@ -968,17 +1026,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/dao/MySQLProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
+        <state relative-caret-position="1887">
           <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-          <folding>
-            <marker date="1545283092000" expanded="true" signature="435:468" ph="SELECT * FRO... products" />
-            <marker date="1545283092000" expanded="true" signature="1307:1336" ph="SELECT categ... products" />
-            <marker date="1545283092000" expanded="true" signature="2035:2094" ph="SELECT id, n... products" />
-            <marker date="1545283092000" expanded="true" signature="3043:3109" ph="SELECT id, n... products" />
-            <marker date="1545283092000" expanded="true" signature="4048:4074" ph="SELECT price... products" />
-            <marker date="1545283092000" expanded="true" signature="4749:4836" ph="SELECT id, n... products" />
-            <marker date="1545283092000" expanded="true" signature="5849:5951" ph="SELECT id, n... products" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,8 +1050,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="956">
+        <state relative-caret-position="-85">
           <caret line="100" column="16" lean-forward="false" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/UserProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/model/FormValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2482">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1921">
+          <caret line="125" column="41" lean-forward="false" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
+          <folding>
+            <marker date="1548912160000" expanded="true" signature="7833:7840" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/shop/config/MyConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
       </provider>

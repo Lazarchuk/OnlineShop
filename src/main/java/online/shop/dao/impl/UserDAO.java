@@ -1,9 +1,9 @@
 package online.shop.dao.impl;
 
 import online.shop.model.User;
-import online.shop.model.UserAddInfo;
-import online.shop.model.UserMainInfo;
-import online.shop.model.UserPassword;
+import online.shop.model.springforms.UserAddInfo;
+import online.shop.model.springforms.UserMainInfo;
+import online.shop.model.springforms.UserPassword;
 
 public interface UserDAO {
     User getUser(String email, String password);

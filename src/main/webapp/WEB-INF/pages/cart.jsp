@@ -149,9 +149,9 @@
 		</div>
 	</section> <!--/#cart_items-->
 	
+<%@include file="footer.jsp" %>
 
-
-	<footer><!--/Footer-->
+	<!-- <footer>
 		<div class="container">
 			<div class="footer-bottom">
 				<div class="row">
@@ -161,7 +161,7 @@
 				</div>
 			</div>
 		</div>
-	</footer><!--/Footer-->
+	</footer> -->
 	
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>

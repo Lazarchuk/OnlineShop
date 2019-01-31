@@ -134,8 +134,10 @@
 			</div>
 		</div>
 	</section><!--/form-->
+	
+	<%@include file="footer.jsp" %>
 
-	<footer><!--/Footer-->
+	<!-- <footer>
 		<div class="container">
 			<div class="footer-bottom">
 				<div class="row">
@@ -145,7 +147,7 @@
 				</div>
 			</div>
 		</div>
-	</footer><!--/Footer-->
+	</footer> -->
 
 
 	<script src="resources/js/jquery.js"></script>
